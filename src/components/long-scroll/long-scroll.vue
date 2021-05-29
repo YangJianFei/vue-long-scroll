@@ -95,11 +95,5 @@ export default {
       }
     }
   }
-  .y-pre-fill,
-  .y-next-fill {
-    text-align: center;
-    color: gray;
-    overflow: hidden;
-  }
 }
 </style>
