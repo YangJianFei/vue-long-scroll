@@ -1,11 +1,22 @@
 {
   "name": "vue-long-scroll",
   "version": "0.1.0",
-  "private": true,
+  "description": "基于vue长列表优化",
+  "keywords": [
+    "vue",
+    "vue-long-scroll",
+    "infinite-scroll"
+  ],
+  "private": false,
+  "main": "lib/vue-long-scroll.umd.min.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name vue-long-scroll --dest lib src/components/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",

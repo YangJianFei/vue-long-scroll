@@ -1,18 +1,29 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <long-scroll :data="data" :style="{height:'400px'}" v-model="current"></long-scroll>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
   name: "Home",
-  components: {
-    HelloWorld,
+  data() {
+    return {
+      current: 0,
+      data: []
+    }
   },
+  created() {
+    this.getData();
+  },
+  methods: {
+    getData() {
+      this.data = Object.keys(Array.apply(null, { length: 10000 })).map(function (item) {
+        return { name: item };
+      });
+    }
+  }
 };
 </script>
