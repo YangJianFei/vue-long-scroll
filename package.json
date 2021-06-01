@@ -1,6 +1,6 @@
 {
   "name": "vue-long-scroll",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "基于vue长列表优化无限滚动(只3d渲染视窗内元素)。Based on Vue long list optimization (only 3D rendering window elements).",
   "keywords": [
     "vue",
