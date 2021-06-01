@@ -1,11 +1,13 @@
 {
   "name": "vue-long-scroll",
-  "version": "0.1.2",
-  "description": "基于vue长列表优化",
+  "version": "0.1.3",
+  "description": "基于vue长列表优化(只3d渲染视窗内元素)。Based on Vue long list optimization (only 3D rendering window elements).",
   "keywords": [
     "vue",
     "vue-long-scroll",
-    "infinite-scroll"
+    "infinite-scroll",
+    "yangjianfei",
+    "flyang"
   ],
   "private": false,
   "main": "lib/vue-long-scroll.umd.min.js",

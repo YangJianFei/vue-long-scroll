@@ -1,7 +1,11 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <long-scroll :data="data" :style="{height:'400px'}" v-model="current"></long-scroll>
+    <long-scroll :data="data" :style="{height:'400px'}" v-model="current">
+      <template #default="{row}">
+        {{row.name}}
+      </template>
+    </long-scroll>
   </div>
 </template>
 
