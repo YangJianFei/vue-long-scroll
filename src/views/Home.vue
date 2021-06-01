@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <long-scroll :data="data" :style="{height:'400px'}" v-model="current">
+    <long-scroll :data="data" :style="{height:'300px'}" v-model="current">
       <template #default="{row}">
         {{row.name}}
       </template>
@@ -15,7 +15,7 @@ export default {
   name: "Home",
   data() {
     return {
-      current: 0,
+      current: 60,
       data: []
     }
   },

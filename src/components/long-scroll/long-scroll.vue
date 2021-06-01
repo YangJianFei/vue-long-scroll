@@ -7,7 +7,7 @@
  * Copyright (c) 2021 瑞为
  */
 <template>
-  <div ref="scrollContain" class="y-long-scroll" @scroll="scroll">
+  <div ref="scrollContain" class="y-long-scroll" @scroll="scroll" style="height:400px;">
     <div class="y-pre-fill" :style="{height:totalHeight+'px'}">
     </div>
     <ul class="y-data-contain" :style="{transform:`translate3d(0,${offset}px,0)`}">
@@ -63,12 +63,28 @@ export default {
       return this.data.slice(this.current, end);
     }
   },
+  watch: {
+    current() {
+      this.bindView();
+    }
+  },
+  mounted() {
+    this.bindView();
+  },
   methods: {
+    bindView() {
+      const scrollTop = this.$refs.scrollContain.scrollTop;
+      let top = this.rowHeight * this.current;
+      this.offset = top;
+      this.$refs.scrollContain.scrollTop = top + scrollTop - Math.floor(scrollTop / this.rowHeight) * this.rowHeight;
+    },
     scroll() {
       const scrollTop = this.$refs.scrollContain.scrollTop;
       this.offset = Math.floor(scrollTop / this.rowHeight) * this.rowHeight;
       let current = Math.floor(scrollTop / this.rowHeight);
-      this.$emit('change', current);
+      if (this.current != current) {
+        this.$emit('change', current);
+      }
     }
   }
 }
