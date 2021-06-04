@@ -1,7 +1,7 @@
 {
   "name": "vue-long-scroll",
   "author": "yangjianfei",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "基于vue长列表优化无限滚动(只3d渲染视窗内元素)。Based on Vue long list optimization (only 3D rendering window elements).",
   "keywords": [
     "vue",
@@ -14,6 +14,8 @@
   ],
   "private": false,
   "main": "lib/vue-long-scroll.umd.min.js",
+  "repository": "https://github.com/YangJianFei/vue-long-scroll",
+  "homepage": "https://github.com/YangJianFei/vue-long-scroll",
   "files": [
     "lib"
   ],
